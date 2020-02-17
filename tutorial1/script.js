@@ -219,7 +219,7 @@ if (age >= 18){
 }
 */
 // switch statement
-
+/*
 var firstName = "John";
 var job = "teacher";
 switch(job) {
@@ -257,7 +257,7 @@ switch(true) {
 
 // falsy values = undefined, null, 0 , "  ", NaN
 // truthy values = NOT falsy values
-
+/*
 var height;
 height = 23; // integer
 
@@ -269,18 +269,90 @@ if (height || height === 0) {
 
 // Equality operators
 
-if (height === "23") { // is false, doesn't print out
-    console.log("The === operator does type coercion!");
+if (height === "23") { // condition is false, doesn't print out
+    console.log("The == operator does type coercion!");
 }
 
 /**
  * Coding challenge 2
  */
 
+/*
+John and Mike both play basketball in different teams. 
+In the latest 3 games, John's team scored 89, 120 and 103 points, 
+while Mike's team scored 116, 94 and 123 points.
+1. Calculate the average score for each team
+2. Decide which teams wins in average (highest average score), 
+print the winner to the console, include the average score in the output.
+3. change the scores to show different winners. 
+Don't forget to take into account there might be a draw (the same average score)
+4. Mary also plays basketball, her team scored 97, 134 and 105 points. 
+Like before, log the average winner to the console. 
+need the && operator to take the decision. 
+If you can't solve this one, just watch the solution, it's no problem :)
+5. change the scores to generate different winners, keeping in mind there might be draws.
+*/
+
+var johnsTeamScore = (89 + 120 + 103) / 3;
+var mikesTeamScore = (116 + 94 + 123) / 3;
+var marysTeamScore = (97 + 134 + 105) / 3;
+
+console.log("John's team average score is " + johnsTeamScore);
+console.log("Mike's team average score is " + mikesTeamScore);
+console.log("Mary's team average score is " + marysTeamScore);
+
+if (johnsTeamScore > mikesTeamScore) {
+    console.log("John's team wins with an average score of " + johnsTeamScore);
+
+} else if (johnsTeamScore | mikesTeamScore < marysTeamScore) {
+    console.log("Mary's team wins with an average score of " + marysTeamScore);
+
+} else if (johnsTeamScore === mikesTeamScore){
+    console.log("Ends with a draw between John's and Mike's teams");
+
+} else if (johnsTeamScore && mikesTeamScore === marysTeamScore) {
+    console.log("Ends in a draw with every team");
+
+} else {
+    console.log("Mike's team wins with an average score of " + mikesTeamScore);
+} 
+
+/**
+ * Functions
+ */
+// function declaration
+// function whatDoYouDo(job, firstName){} 
+
+// function expression
+var whatDoYouDo = function(job, firstName) {
+    switch(job) {
+        case "teacher":
+            return firstName + " teaches kids how to code";
+        case "driver":
+            return firstName + " drives a cab in Lisbon";
+        case "designer":
+            return firstName + " designs beautiful websites"
+        default:
+            return firstName + " does something else";
+    }
+}
+
+console.log(whatDoYouDo("teacher", "John"));
+console.log(whatDoYouDo("designer", "Jane"));
+console.log(whatDoYouDo("retired", "Mark"));
+
+/**
+ * Arrays
+ */
+
+// Initialize new array 
+
+var names = ["John", "Mark", "Jane"];
+var years = new Array(1990, 1969, 1948);
 
 
 
 
 
 
- 
+
