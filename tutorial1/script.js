@@ -49,7 +49,7 @@ console.log(firstName + " " + lastName);
 /**
  * Basic operators
  */
-
+/*
 var year, yearJohn, yearMark;
 now = 2018;
 ageJohn = 28;
@@ -79,7 +79,7 @@ console.log(typeof x);
  * Operator precedence
  * Precedence is priority of what is executed first
  */
-
+/*
 var now = 2018;
 var yearJohn = 1989; 
 var fullAge = 18;
@@ -109,7 +109,81 @@ console.log(x);
 x--;
 console.log(x);
 
+/***
+ * Coding challenge 1
+ */
+
+/*
+Mark and John are trying to compare their BMI (Body Mass Index), which is calculated
+using the formula: BMI = mass / height^2
+Store Mark's and John's mass and height in variables
+Calculate both their BMIs
+Create a boolean variable containing information about whether Mark has a higher BMI
+than John
+Print a string to the console containing the variable from step 3 
+(Something like "Is Mark's BMI higher than John's? true")
+*/
+/*
+var massMark = 78; // kg
+var massJohn = 83; // kg
+
+var heightMark = 1.69; // metres
+var heightJohn = 1.85; // metres
+
+var markBMI = Math.pow(heightMark, 2) / massMark;
+var johnBMI = Math.pow(heightJohn, 2) / massJohn;
+
+console.log("Mark's BMI is " + markBMI);
+console.log("John's BMI is " + johnBMI);
+
+var isMarksBMILower;
+isMarksBMILower = markBMI < johnBMI; //returns true, if BMI is lower
+
+console.log("Is Mark's BMI lower than John's? " + isMarksBMILower);
+
+/**
+ * IF/Else statements
+ */
+
+var firstName = "john";
+var civilStatus = "single";
+
+
+if (civilStatus === "married") {
+    console.log(firstName + "is married!"); //false (doesn't show)
+} else {
+    console.log(firstName + " will hopefully marry soon!");
+}
+
+var isMarried = true; 
+if (isMarried) {
+    console.log(firstName + "is married!");
+} else {
+    console.log(firstName + " will hopefully marry soon!");
+}
+
+var massMark = 78; // kg
+var massJohn = 83; // kg
+
+var heightMark = 1.69; // metres
+var heightJohn = 1.85; // metres
+
+var markBMI = Math.pow(heightMark, 2) / massMark;
+var johnBMI = Math.pow(heightJohn, 2) / massJohn;
+
+console.log("Mark's BMI is " + markBMI);
+console.log("John's BMI is " + johnBMI);
+
+if (markBMI < johnBMI){
+    console.log("Mark's BMI is lower than John's BMI");
+} else {
+    console.log("Mark's BMI is higher than John's BMI");
+}
+
+/**
+ * Boolean Logic 
+ */
 
 
 
-
+ 
