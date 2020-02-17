@@ -255,7 +255,32 @@ switch(true) {
  * Truthy and Falsy values and Equality operators
  */
 
+// falsy values = undefined, null, 0 , "  ", NaN
+// truthy values = NOT falsy values
+
+var height;
+height = 23; // integer
+
+if (height || height === 0) {
+    console.log("Variable is defined");
+} else {
+    console.log("Variable has NOT been defined");
+}
+
+// Equality operators
+
+if (height === "23") { // is false, doesn't print out
+    console.log("The === operator does type coercion!");
+}
+
+/**
+ * Coding challenge 2
+ */
 
 
 
 
+
+
+
+ 
