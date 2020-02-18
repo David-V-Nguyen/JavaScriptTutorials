@@ -395,9 +395,39 @@ In the end, John would like to have 2 arrays:
 (NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
 */
 
+var bills = [124, 48, 268]; // in $
 var billOne = 124;
 var billTwo = 48;
 var billThree = 268;
+
+ 
+
+if (bills < 50) {
+    
+    var highRate = (20 / 100);
+    highTip = bills * highRate;
+    console.log("John pays " + highTip);
+
+} else if (bills > 50 && bills < 200) {
+    
+    var medRate = (15 / 100);
+    medTip = bills * medRate;
+    console.log("John pays " + medTip);
+
+} else { // bills > 200
+
+    var lowRate = 10 / 100;
+    lowTip = bills * lowRate;
+    console.log("John pays " + lowTip);
+}
+
+//var billTips = [highTip, medTip, lowTip];
+//console.log(billTips.length());
+
+
+
+ 
+
 
 
 
