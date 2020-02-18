@@ -394,7 +394,7 @@ In the end, John would like to have 2 arrays:
 2) Containing all three final paid amounts (bill + tip).
 (NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
 */
-
+/*
 var billOne = 124;
 var billTwo = 48;
 var billThree = 268;
@@ -433,16 +433,101 @@ console.log("John pays $" + totalBillTwoTips);
 var totalBillThreeTips = 268 + lowTip;
 console.log("John pays $" + totalBillThreeTips);
 
+/**
+ * Objects and properties
+ */
+/*
+// Object literal
+var john = {
+    firstName: "John",
+    lastName: "Smith",
+    birthYear: 1990,
+    family: ["Jane", "Mark", "Bob", "Lucy"],
+    job: "teacher",
+    isMarried: false
+};
+console.log(john.firstName);
 
+console.log(john["lastName"]); // find property in array
 
+var x = "birthYear";
+console.log(john[x]);
 
+john.job = "designer";
+john["isMarried"] = true;
+console.log(john);
+
+// new Object syntax
+var jane = new Object();
+jane.name = "Jane";
+jane.birthYear = 1969;
+jane["lastName"] = "Smith";
+console.log(jane);
  
+/**
+ * Object and methods
+ */
+/*
+var john = {
+    firstName: "John",
+    lastName: "Smith",
+    birthYear: 1990,
+    family: ["Jane", "Mark", "Bob", "Lucy"],
+    job: "teacher",
+    isMarried: false,
+    calcAge: function() {
+        return this.age = this.birthYear; // this = the PRESENT object (itself)
+    }
 
+};
 
+//console.log(john.calcAge(1990));
+john.calcAge();
+console.log(john);
 
+/**
+ * coding challenge 4
+ */
+/*
+Mark and John are trying to compare their BMI (Body Mass Index), which is calculated
+using the formula: BMI = mass / height^2
+Store Mark's and John's mass and height in variables
+Calculate both their BMIs
+For each of them, create an object with properties for their full name, mass, height
+Add a method to each object to calculate the BMI, save the BMI to the object and
+return it from the method
+In the end log to the console who has the highest BMI
+(Hint: They might have the same BMI )
+*/
 
+var massMark = 78; // kg
+var massJohn = 83; // kg
 
+var heightMark = 1.69; // metres
+var heightJohn = 1.85; // metres
 
+var john = {
+    fullName: "John Smith",
+    mass: 83,
+    height: 1.85,
+    bmi: johnBMI,
+    calcJohnBMI: function() {
+        return johnBMI = this.mass / Math.pow(this.height);
+    },
+    
+};
+
+var mark = {
+    fullName: "Mark Manson",
+    mass: 78,
+    height: 1.69,
+    bmi: markBMI,
+    calcMarkBMi: function() {
+        return markBMI = this.mass / Math.pow(this.height);
+    }
+};
+
+//console.log(john.calcJohnBMI);
 
 
 
