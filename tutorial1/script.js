@@ -347,8 +347,59 @@ console.log(whatDoYouDo("retired", "Mark"));
 
 // Initialize new array 
 
-var names = ["John", "Mark", "Jane"];
+var names = ["John", "Mark", "Jane"]; //arrays start at 0
 var years = new Array(1990, 1969, 1948);
+
+console.log(names[2]); // prints Jane
+console.log(names.length); // prints the length of the array = 3 names
+
+// mutate array data 
+
+names[1] = "Ben"; // stores Ben into the 2nd position of array
+names[names.length] = "Mary"; // add mary to the 3rd position of array
+console.log(names); // show the whole array (contents)
+
+// different data type 
+
+var john = ["John", "Smith", 1990, "teacher", false];
+
+john.push("blue"); // adds element at the end of array 
+john.shift("Mr."); // adds element at the start of array
+console.log(john);
+
+john.pop(); // removes last element in array and returns element
+john.pop();
+john.shift();
+console.log(john);
+
+john.indexOf(john.indexOf(1990));
+
+var isDesigner = john.indexOf("designer") === -1 ? "John is NOT a designer"
+: "John IS a designer"; 
+console.log(isDesigner);
+
+/**
+ * code challenge 3
+ */
+
+ /*
+John and his family went on a holiday and went to 3 different restaurants. 
+The bills were $124, $48 and $268.
+To tip the waiter a fair amount, John created a simple tip calculator (as a function). 
+He likes to tip 20% of the bill when the bill is less than $50, 
+15% when the bill is between $50 and $200, 
+10% if the bill is more than $200.
+In the end, John would like to have 2 arrays:
+1) Containing all three tips (one for each bill)
+2) Containing all three final paid amounts (bill + tip).
+(NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
+*/
+
+var billOne = 124;
+var billTwo = 48;
+var billThree = 268;
+
+
 
 
 
