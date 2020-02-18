@@ -506,28 +506,46 @@ var massJohn = 83; // kg
 var heightMark = 1.69; // metres
 var heightJohn = 1.85; // metres
 
-var john = {
-    fullName: "John Smith",
-    mass: 83,
-    height: 1.85,
-    bmi: johnBMI,
-    calcJohnBMI: function() {
-        return johnBMI = this.mass / Math.pow(this.height);
-    },
+// john object
+var john = new Object();
+john.fullName = "John Smith";
+john.mass = 83;
+john.height = 1.85;
+calcJohnBMI = function() {
+    return johnBMI = (john.height * john.height) / john.mass;
+}
+
+console.log(john);
+//console.log(calcJohnBMI());
+john.bmi = calcJohnBMI(); // adds new property (bmi) to object with the bmi value
+john["bmiRating"] = "highest"; // adds bmiRating property is a (string)
+
+// mark object
+var mark = new Object();
+mark.fullName = "Mark Mason";
+mark.mass = 78;
+mark.height = 1.69;
+calcMarkBMI = function() {
+    return markBMI = (mark.height * mark.height) / mark.mass;
+}
+
+console.log(mark);
+//console.log(calcMarkBMI());
+mark.bmi = calcMarkBMI(); // adds new property (bmi) to object with the bmi value
+mark["bmiRating"] = "lowest"; // adds bmiRating property is a (string)
+
+console.log(john);
+console.log(mark);
+
+/**
+ * Loops and Iteration
+ */
+
+// for-enchanced loop
+
+for (var i = 0; i < 1; i++) {
     
-};
-
-var mark = {
-    fullName: "Mark Manson",
-    mass: 78,
-    height: 1.69,
-    bmi: markBMI,
-    calcMarkBMi: function() {
-        return markBMI = this.mass / Math.pow(this.height);
-    }
-};
-
-//console.log(john.calcJohnBMI);
+}
 
 
 
