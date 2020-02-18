@@ -292,7 +292,7 @@ need the && operator to take the decision.
 If you can't solve this one, just watch the solution, it's no problem :)
 5. change the scores to generate different winners, keeping in mind there might be draws.
 */
-
+/*
 var johnsTeamScore = (89 + 120 + 103) / 3;
 var mikesTeamScore = (116 + 94 + 123) / 3;
 var marysTeamScore = (97 + 134 + 105) / 3;
@@ -322,7 +322,7 @@ if (johnsTeamScore > mikesTeamScore) {
  */
 // function declaration
 // function whatDoYouDo(job, firstName){} 
-
+/*
 // function expression
 var whatDoYouDo = function(job, firstName) {
     switch(job) {
@@ -346,7 +346,7 @@ console.log(whatDoYouDo("retired", "Mark"));
  */
 
 // Initialize new array 
-
+/*
 var names = ["John", "Mark", "Jane"]; //arrays start at 0
 var years = new Array(1990, 1969, 1948);
 
