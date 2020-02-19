@@ -499,7 +499,7 @@ return it from the method
 In the end log to the console who has the highest BMI
 (Hint: They might have the same BMI )
 */
-
+/*
 var massMark = 78; // kg
 var massJohn = 83; // kg
 
@@ -541,11 +541,79 @@ console.log(mark);
  * Loops and Iteration
  */
 
-// for-enchanced loop
-
-for (var i = 0; i < 1; i++) {
-    
+// For loop
+/*
+for (var i = 0; i < 10; i++) {
+    console.log(i);
 }
+
+var john = ["John", "Smith", 1990, "designer", false];
+for (var i = 0; i < john.length; i++) {
+    
+    console.log(john[i]);
+}
+/*
+var i = 0;
+while (i < john.length) {
+    console.log(john[i]);
+}
+*/
+// continue and break statements
+/*
+var john = ["John", "Smith", 1990, "designer", false, "blue"];
+/*
+for (var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== "string") continue; // !== (means strict different)
+    // if statement parenthesis can be removed (look above)
+    console.log(john[i]);
+}
+/*
+for (var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== "string") break; // !== (means strict different) if true = break
+    console.log(john[i]);
+}
+*/
+
+// looping backwards 
+/*
+for (var i = john.length - 1; i >= 0; i--) {
+    //console.log(john.reverse(i));
+    console.log(john[i]);
+}
+
+/**
+ * coding challenge 5
+ */
+/*
+John and his family went on a holiday and went to 3 different restaurants. 
+The bills were $124, $48 and $268, $180, $42.
+To tip the waiter a fair amount, John created a simple tip calculator (as a function). 
+He likes to tip 20% of the bill when the bill is less than $50, 
+15% when the bill is between $50 and $200, 
+10% if the bill is more than $200.
+create an object with an array for the bill values
+add a method to calculate the tip
+This method should include a loop to iterate over all the paid bills
+and do the tip calculations
+As an output, create 1) a new array containing all tips,
+2) an array containing final paid amounts (bill + tip)
+(hint: start with 2 empty arrays[] as properties and then fill them up in the loop)
+(NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
+
+*/
+
+bill = new Object;
+bill.billValues = [124, 48, 268, 180, 42];
+console.log(bill);
+
+// calculation function
+calcTip = function () {
+    
+    for (var i = 0; i <= billValues.length; i++) {
+        // for loop needed
+    }
+}
+
 
 
 
