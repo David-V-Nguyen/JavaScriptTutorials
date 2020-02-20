@@ -604,29 +604,23 @@ As an output, create 1) a new array containing all tips,
 
 bill = new Object;
 var billValues = [124, 48, 268, 180, 42];
-var tipRates = [];
+var tipRates = [ ];
+var tipsNBills;
+tipsNBills = [];
 bill.billValue = billValues;
-bill.tipRate = tipRates; 
-console.log(bill); // object properties output
+bill.tipRate = tipRates;
+console.log(bill); // output object properties 
 
-
-calcTip = function () {
+calcTip = function (tipRate) {
     for (var i = 0; i <= billValues.length; i++) {
         if(billValues[i] < 50) {
-           return tipRate = billValues[i] * 0.2;
-           tipRates[tipRate];
-           
+            tipRates[tipRate] = billValues[i] * 0.2;
             
         } else if (billValues[i] > 50 && billValues[i] > 200) {
-            return tipRate = billValues[i] * 0.15;
-            tipRates[tipRate];
-
-        } else if (billValues[i] > 200){
-            return bill.tipRates[tipRate] = billValues[i] * 0.1;
-            
-
+            tipRates[tipRate] = billValues[i] * 0.15;
+               
         } else {
-
+            return tipRates[tipRate] = billValues[i] * 0.1;
         }
     }
 }
