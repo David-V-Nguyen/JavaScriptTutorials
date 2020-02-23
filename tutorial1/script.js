@@ -604,30 +604,44 @@ As an output, create 1) a new array containing all tips,
 
 bill = new Object;
 var billValues = [124, 48, 268, 180, 42];
-var tipRates = [ ];
-var tipsNBills;
-tipsNBills = [];
+var tipRates = [];
+var tipsNBills = [];
+var tipRate;
+var totalCost;
 bill.billValue = billValues;
-bill.tipRate = tipRates;
+bill.tipValue = tipRates;
+bill.costs = tipsNBills;
 console.log(bill); // output object properties 
 
-calcTip = function (tipRate) {
+calcTip = function () {
     for (var i = 0; i <= billValues.length; i++) {
         if(billValues[i] < 50) {
-            tipRates[tipRate] = billValues[i] * 0.2;
-            
-        } else if (billValues[i] > 50 && billValues[i] > 200) {
-            tipRates[tipRate] = billValues[i] * 0.15;
-               
+            tipRate = billValues[i] * 0.2;
+            tipRates.push(tipRate);
+            totalCost = tipRate + billValues[i];
+            tipsNBills.push(totalCost);
+
+        } else if (billValues[i] > 50 && billValues[i] < 200) {
+            tipRate = billValues[i] * 0.15;
+            tipRates.push(tipRate);
+            totalCost = tipRate + billValues[i];
+            tipsNBills.push(totalCost);
+
+        } else if (billValues[i] > 200) {
+            tipRate = billValues[i] * 0.1;
+            tipRates.push(tipRate);
+            totalCost = tipRate + billValues[i];
+            tipsNBills.push(totalCost);
+
         } else {
-            return tipRates[tipRate] = billValues[i] * 0.1;
+            
         }
     }
 }
 
-console.log();
-console.log(calcTip(billValues)); //9.6000000001 output
-console.log();
+console.log(calcTip()); // array for bills to pay
+console.log(tipRates); // array tips calculated
+console.log(tipsNBills); //array for total cost paid
 
 
 
