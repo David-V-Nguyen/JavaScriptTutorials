@@ -382,7 +382,7 @@ console.log(isDesigner);
  * code challenge 3
  */
 
- /*
+/*
 John and his family went on a holiday and went to 3 different restaurants. 
 The bills were $124, $48 and $268.
 To tip the waiter a fair amount, John created a simple tip calculator (as a function). 
@@ -601,7 +601,7 @@ As an output, create 1) a new array containing all tips,
 (NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
 
 */
-
+/*
 bill = new Object;
 var billValues = [124, 48, 268, 180, 42];
 var tipRates = [];
@@ -615,7 +615,7 @@ console.log(bill); // output object properties
 
 calcTip = function () {
     for (var i = 0; i <= billValues.length; i++) {
-        if(billValues[i] < 50) {
+        if (billValues[i] < 50) {
             tipRate = billValues[i] * 0.2;
             tipRates.push(tipRate);
             totalCost = tipRate + billValues[i];
@@ -634,7 +634,7 @@ calcTip = function () {
             tipsNBills.push(totalCost);
 
         } else {
-            
+
         }
     }
 }
@@ -642,9 +642,72 @@ calcTip = function () {
 console.log(calcTip()); // array for bills to pay
 console.log(tipRates); // array tips calculated
 console.log(tipsNBills); //array for total cost paid
+console.log();
 
+/**
+ * Coding challenge 5 part 2 
+ */
+/*
+Mark's family also went on a holiday going to 4 different restaurants
+The bills were $77, $375, $110 and $45
+Mark likes to tip 20% of the bill when the bill is less than $100,
+10% when the bill is between $100 and $300
+25% if the bill is more than $300 (different than john)
 
+Implement the same functionality as before but using mark's tipping rules
+Create a function (not a method) to calculate the average of the given array tips
+Loop over the array and in each iteration store the current sum of a variable (starting at 0)
+After you have the sum of the array, divide it by the number of elements in it
+Calculate the average tip for each family
+log to the console which family paid the highest tips on average
+*/
 
+mark = new Object;
+var markBillValues = [77, 375, 110, 45];
+var markTipValues = [];
+var markTipRate;
+var markPayTotals = [];
+var markPayTotal;
 
+var totalPaymentAverage = 0; // variable for total average tip payment
+mark.markBillValue = markBillValues; //bill pay cost
+mark.markTipTotal = markTipValues; // tip pay cost
+mark.markPayAmount = markPayTotals; // tips and bill pay cost
+
+console.log(mark); //output object properties
+
+calcTips = function () {
+    for (m = 0; m <= markBillValues.length; m++) {
+        if (markBillValues[m] < 100) {
+            markTipRate = markBillValues[m] * 0.2; // calculate tip rate
+            markTipValues.push(markTipRate); // puts tip amount into array
+            markPayTotal = markBillValues[m] + markTipRate; // calculate total pay (bill + tips)
+            markPayTotals.push(markPayTotal); // puts total pay into array
+             
+
+        } else if (markBillValues[m] > 100 && markBillValues[m] < 300) {
+            markTipRate = markBillValues[m] * 0.1;
+            markTipValues.push(markTipRate);
+            markPayTotal = markBillValues[m] + markTipRate;
+            markPayTotals.push(markPayTotal);
+
+        } else if (markBillValues[m] > 300) {
+            markTipRate = markBillValues[m] * 0.25;
+            markTipValues.push(markTipRate);
+            markPayTotal = markBillValues[m] + markTipRate;
+            markPayTotals.push(markPayTotal);
+
+        } else {
+
+        }
+
+    }
+    
+
+}
+
+console.log(calcTips(markBillValues));
+//console.log(markPayTotals); //total payment (bills + tips)
+console.log(totalPaymentAverage); //average payment for tips
 
 
