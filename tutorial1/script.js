@@ -700,14 +700,19 @@ calcTips = function () {
         } else {
 
         }
-
     }
-    
-
+    calcAverage = function() { // I'm stuck
+        var t = 0;
+        while (t <= markPayTotals.length) {
+            totalPaymentAverage = markPayTotals.reduceRight(calcTips);
+        }
+        t++;
+    }
 }
 
 console.log(calcTips(markBillValues));
 //console.log(markPayTotals); //total payment (bills + tips)
+//console.log(calcAverage(totalPaymentAverage));
 console.log(totalPaymentAverage); //average payment for tips
 
 
