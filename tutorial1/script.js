@@ -662,6 +662,7 @@ Calculate the average tip for each family
 log to the console which family paid the highest tips on average
 */
 
+/** 
 mark = new Object;
 var markBillValues = [77, 375, 110, 45];
 var markTipValues = [];
@@ -677,14 +678,13 @@ mark.markPayAmount = markPayTotals; // tips and bill pay cost
 console.log(mark); //output object properties
 
 calcTips = function () {
-    for (m = 0; m <= markBillValues.length; m++) {
+    for (var m = 0; m <= markBillValues.length; m++) {
         if (markBillValues[m] < 100) {
             markTipRate = markBillValues[m] * 0.2; // calculate tip rate
             markTipValues.push(markTipRate); // puts tip amount into array
             markPayTotal = markBillValues[m] + markTipRate; // calculate total pay (bill + tips)
             markPayTotals.push(markPayTotal); // puts total pay into array
              
-
         } else if (markBillValues[m] > 100 && markBillValues[m] < 300) {
             markTipRate = markBillValues[m] * 0.1;
             markTipValues.push(markTipRate);
@@ -715,4 +715,37 @@ console.log(calcTips(markBillValues));
 //console.log(calcAverage(totalPaymentAverage));
 console.log(totalPaymentAverage); //average payment for tips
 
+*/
+// proper solution
+var john = {
+    fullName: "John Smith",
+    bills: [124 , 48, 268, 180, 42],
+    calcTips: function () {
+        this.tips = [];
+        this.finalValues = [];
+
+        for(var i = 0; i < this.bills.length; i++)
+        {
+            // Determine percentage based on tipping rules
+            var percentage;
+            var bill = this.bills[i];
+
+            if (bill < 50) 
+            {    percentage = 0.2;
+            } else if (bill >= 50 && bill < 200) {
+                percentage = 0.15;
+            } else {
+                percentage = 0.1;
+            }
+
+            //add results to the corresponding arrays
+            this.tips[i] = bill * percentage;
+            this.finalValues[i] = bill + bill * percentage;
+
+        }
+    }
+}
+
+john.calcTips();
+console.log(john);
 
