@@ -95,7 +95,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
         document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
         document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
     } else {
-        //next playergit 
+        //next player 
         nextPlayer();
     }
 
@@ -116,7 +116,7 @@ function nextPlayer() {
 }
 
 function newGame() {
-
+    // do something
 
 
 
