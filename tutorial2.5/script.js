@@ -83,4 +83,37 @@ if (height) {
     console.log("Height is UNDEFINED"); // executes (condition is false)
  }
 
- 
+/** 
+ * Equality operators
+ * '==' vs '==='
+ */
+
+const age = 18;
+// using '===' operator, compares the age if it is EXACTLY number 18
+// if condition is single lined, can remove { } blocks and print result
+if (age === age) console.log("You just became an adult!");
+
+// using '==' operator, converts and coercion value to the compared value
+// loosely equality operator
+console.log('18' == 18); // true, converted to number type
+
+// Calls website to find values using prompt function
+const favourite = prompt("What's your favourite number?");
+
+console.log(favourite);
+console.log(typeof(favourite)); // type string
+
+if (favourite === 23) { 
+    console.log("cool 23 is an amazing number");
+} else if (favourite == 7) {
+    console.log("7 is also a cool number");
+} else if (favourite == 9) { 
+    console.log("9 is also a cool number");
+} else {
+    console.log("Number is not 23 or 7 or 9");
+}
+
+// '!==' operator compares and IS NOT the value
+// if favourite value IS NOT 23, executes console.log
+if (favourite !== 23) console.log("Why not 23?");
+
