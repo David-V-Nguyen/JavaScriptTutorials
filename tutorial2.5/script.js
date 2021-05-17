@@ -54,3 +54,33 @@ console.log(2 + 3 + 4 + '5');
 console.log('10' - '4' - '3' - 2 + '5');
 
 // type coercion can cause bugs if not known correctly
+
+/** 
+ * Booleans and truthy tables
+ * 
+ */
+
+// 5 falsy values; 0, "", undefined, null, NaN = converted to false
+
+// Use Boolean function to turn value to boolean (true / false)
+console.log(Boolean(0)); // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean("jones")); // true
+console.log(Boolean({})); // true
+console.log(Boolean("")); // false
+
+const money = 0;
+if (money) {
+    console.log("Don't spend it all");
+} else {
+    console.log("You should get a job!"); // executes (condition is false)
+}
+
+let height; // height is no value defined
+if (height) {
+    console.log("YAY! Height is defined");
+} else {
+    console.log("Height is UNDEFINED"); // executes (condition is false)
+ }
+
+ 
