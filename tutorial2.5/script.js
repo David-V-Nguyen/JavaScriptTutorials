@@ -315,7 +315,6 @@ Test Data: Test for bill values 275, 40 and 430
 
 const tip = 0;
 
-const highTip = 0;
 const firstBill = 275;
 const secondBill = 40;
 const thirdBill = 430;
@@ -328,3 +327,29 @@ console.log(`The bill was ${secondBill}, the tip was ${secondBill * 0.2} and the
 
 thirdBill <= 300 && thirdBill >= 50 || thirdBill > 300 ? console.log(`The bill was ${thirdBill}, the tip was ${thirdBill * 0.15} and the total value ${thirdBill + thirdBill * 0.15}`):
 console.log(`The bill was ${thirdBill}, the tip was ${thirdBill * 0.2} and the total value ${thirdBill + thirdBill * 0.2}`);
+
+/**
+ * JavaScript releases and ES5, ES6+ and ESNext
+ * 
+ */
+
+// Brendan Eich created first version of JavaScript called Mocha
+// Mocha name changed to JavaScript to please the developers
+// Microsoft launches IE, copies JS from netscape and called it JScript
+// ES1 created
+// ES5 big changes and features
+// ES6 biggest update ever
+
+// Javascript is able to execute due to backward compatibility
+// Older version not removed only added new features
+
+// use the up to date chrome version browser
+// all browsers have certain versions of their browser that runs the software
+// Converting back to ES5 to ensure browser compatibility for all users
+// ES5 not supported in older browsers (only modern browsers supported)
+
+// Most features in production with transpiling and polyfilling
+
+// ESNext = future versions of the language (new feature proposals)
+
+
