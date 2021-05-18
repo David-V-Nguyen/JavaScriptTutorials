@@ -98,8 +98,8 @@ if (age === age) console.log("You just became an adult!");
 console.log('18' == 18); // true, converted to number type
 
 // Calls website to find values using prompt function
-const favourite = prompt("What's your favourite number?");
-
+//const favourite = prompt("What's your favourite number?");
+const favourite = 2; // stops prompt
 console.log(favourite);
 console.log(typeof(favourite)); // type string
 
@@ -117,3 +117,87 @@ if (favourite === 23) {
 // if favourite value IS NOT 23, executes console.log
 if (favourite !== 23) console.log("Why not 23?");
 
+/** 
+ * Basic Boolean logic
+ * 'AND' , 'OR', 'NOT' operators
+ */
+
+// Boolean variables can be either true or false
+
+// A: Sarah has a driver license
+// B: Sarah has good vision
+
+// A AND B = Sarah has a driver license AND good vision
+// True when all conditions are true
+// False when conditions are half true
+// False when all conditions false
+
+// A OR B = Sarah has a driver license OR good vision
+// True when ONE condition is true
+// False when all conditions are false
+
+// NOT A, NOT B
+// Inverts true/false value
+
+/**
+ * Logical operators
+ * '&&' = AND , '!' = NOT , '||' = OR
+ */
+
+const hasDriversLicense = true; // A 
+const hasGoodVision = true;     // B
+
+console.log(hasDriversLicense && hasGoodVision); 
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+const shouldDrive = hasDriversLicense && hasGoodVision;
+
+if (shouldDrive) {
+    console.log("Sarah is able to drive");
+} else {
+    console.log("Someone else should drive");
+}
+
+const isTired = false; // C
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log("Sarah is able to drive");
+} else {
+    console.log("Someone else should drive");
+}
+
+/*
+There are 2 gymnastic teams Dolphins and Koalas,
+They compete against each other 3 times and The winner
+with the highest average score wins the a trophy!
+
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition,
+print it to the console. Don't forget that there can be a draw, so test for that as well
+
+3. Bonus 1: Include a requirement for the minimum score of 100, with this rule, 
+a team only wins if it has a higher score than the other team, the same time a score
+of at least 100 points
+Hint: Use a logical operator to test for minimum score, as well as multiple else-if blocks
+
+Test Data: 
+Dolphins score 96, 108, 89
+Koalas score 88, 91, 110
+ */
+
+const dolphinAvScore = (96 + 108 + 89 / 3);
+const koalaAvScore = (88 + 91 + 110 / 3); 
+const minimumScore = 100;
+
+console.log(dolphinAvScore);
+console.log(koalaAvScore);
+
+if (dolphinAvScore > koalaAvScore && dolphinAvScore >= minimumScore && koalaAvScore >= minimumScore) {
+    console.log("Dolphins team has won!");
+} else if (dolphinAvScore === koalaAvScore) {
+    console.log("It is a draw between Dolphins and Koalas!");
+} else {
+    console.log("Koalas team has won!");
+}
