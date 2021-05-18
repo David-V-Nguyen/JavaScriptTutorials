@@ -206,6 +206,7 @@ if (dolphinAvScore > koalaAvScore && dolphinAvScore >= minimumScore && koalaAvSc
  * Switch statement 
  * Removes repeated code, minimizes code written
  */
+
 /*
 const day = 'thursday';
 
@@ -312,4 +313,18 @@ Example: 'The bill was 275, the tip was 41.25, and the total value 316.25`
 Test Data: Test for bill values 275, 40 and 430
 */
 
-const tip = 
+const tip = 0;
+
+const highTip = 0;
+const firstBill = 275;
+const secondBill = 40;
+const thirdBill = 430;
+
+firstBill <= 300 && firstBill >= 50 || firstBill > 300 ? console.log(`The bill was ${firstBill}, the tip was ${firstBill * 0.15} and the total value ${firstBill + firstBill * 0.15}`):
+console.log(`The bill was ${firstBill}, the tip was ${firstBill * 0.2} and the total value ${firstBill + firstBill * 0.2}`);
+
+secondBill <= 300 && secondBill >= 50 && secondBill > 300 ? console.log(`The bill was ${secondBill}, the tip was ${secondBill * 0.15} and the total value ${secondBill + secondBill * 0.15}`):
+console.log(`The bill was ${secondBill}, the tip was ${secondBill * 0.2} and the total value ${secondBill + secondBill * 0.2}`);
+
+thirdBill <= 300 && thirdBill >= 50 || thirdBill > 300 ? console.log(`The bill was ${thirdBill}, the tip was ${thirdBill * 0.15} and the total value ${thirdBill + thirdBill * 0.15}`):
+console.log(`The bill was ${thirdBill}, the tip was ${thirdBill * 0.2} and the total value ${thirdBill + thirdBill * 0.2}`);
