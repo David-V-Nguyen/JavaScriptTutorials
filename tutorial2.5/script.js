@@ -87,7 +87,7 @@ if (height) {
  * Equality operators
  * '==' vs '==='
  */
-
+/*
 const age = 18;
 // using '===' operator, compares the age if it is EXACTLY number 18
 // if condition is single lined, can remove { } blocks and print result
@@ -143,7 +143,7 @@ if (favourite !== 23) console.log("Why not 23?");
  * Logical operators
  * '&&' = AND , '!' = NOT , '||' = OR
  */
-
+/*
 const hasDriversLicense = true; // A 
 const hasGoodVision = true;     // B
 
@@ -186,7 +186,7 @@ Test Data:
 Dolphins score 96, 108, 89
 Koalas score 88, 91, 110
  */
-
+/*
 const dolphinAvScore = (96 + 108 + 89 / 3);
 const koalaAvScore = (88 + 91 + 110 / 3); 
 const minimumScore = 100;
@@ -201,3 +201,115 @@ if (dolphinAvScore > koalaAvScore && dolphinAvScore >= minimumScore && koalaAvSc
 } else {
     console.log("Koalas team has won!");
 }
+
+/**
+ * Switch statement 
+ * Removes repeated code, minimizes code written
+ */
+/*
+const day = 'thursday';
+
+switch(day) {
+    case 'monday': // day === 'monday' if true, executes console.log 
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break; // without break, code will keep executing
+    case 'tuesday': 
+        console.log('Prepare  theory videos');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('write code examples');
+        break;
+    case 'friday':
+        console.log('Record videos');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('Enjoy the weekend');
+        break;
+    default: // when input doesn't satisfy conditions
+        console.log('Not a valid day');
+}
+
+if (day === 'monday') {
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+} else if (day === 'tuesday') {
+    console.log('Prepare  theory videos');
+} else if (day === 'wednesday' || day === 'thursday') {
+    console.log('write code examples');
+} else if (day === 'friday') {
+    console.log('Record videos');
+} else if (day == 'saturday' || day === 'sunday') {
+    console.log('Enjoy the weekend');
+} else {
+    console.log('Not a valid day');
+}
+
+/**
+ * Statements and Expressions
+ * 
+ */
+
+// {3 + 4} = is an expression, produces a value
+
+// {true && false && !false} = is an expression
+/*
+if (23 > 10) { // an expression since it is produces a result
+    const str = '23 is bigger'; // Statement due to semicolon used 
+}
+*/
+const me = 'Jonas';
+// use amp sign to enable strings and expressions
+console.log(`i'm ${2037 - 1991} years old ${me}`);
+
+/**
+ * Conditional (Ternary) operator, produces a value
+ * '?' = short-hand if statement
+ */
+
+const age = 15;
+age >= 18 ? console.log("I like to drink wine"):
+console.log("I like to drink water");
+
+// removed console.logs, stored value into variable and consoled the variable
+// easier to write and understand compared to if statement below
+const drink = age >= 18 ? "wine" : 'water';
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+    drink2 = "wine";
+} else {
+    drink2 = "water";
+}
+
+console.log(drink2);
+
+// Expression can be used to print value
+// use amp sign to enable ternary operators in expressions
+console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
+
+/**
+ * Coding challenge 4
+ * 
+ */
+/*
+Steven wants to build a very simple tip calculator for whenever he goes
+eating in a restaurant. In his country, it's usual to tip 15% if the bill value
+is between 50 and 300. If the value is different, the tip is 20%.
+
+1. Your task is to calculate the tip, depending on the bill value.
+Create the variable called 'tip' for this. It's not allowed to use an if/else statement
+(if it's easier for you, you can start with an if/else statement and then try to convert
+it to a ternary operator!)
+
+2. Print a string to the console containing the bill value, the tip, and the final value
+(bill + tip).
+Example: 'The bill was 275, the tip was 41.25, and the total value 316.25`
+
+Test Data: Test for bill values 275, 40 and 430
+*/
+
+const tip = 
