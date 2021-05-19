@@ -1,6 +1,6 @@
 'use strict';
 // shows visible errors in the console
-
+/*
 let hasDriversLicense = false;
 const passTest = true;
 
@@ -15,7 +15,7 @@ if (hasDriversLicense) console.log('I can drive now');
  * Code that can be used continuously
  * 
  */
-
+/*
 function logger () {
     console.log('My name is David');
 }
@@ -52,6 +52,7 @@ console.log(num);
 
 // Function declaration
 // creating a function and any parameters (values) it takes
+/*
 function calcAge1 (birthYear) {
     return 2037 - birthYear;
 }
@@ -78,6 +79,7 @@ console.log(age1, age2);
 // What is being used as parameters
 // Arrow points to expression
 // store function in variable
+/*
 const calcAge3 = birthYear => 2037 - birthYear;
 // explicitly returns '2037 - birthYear' automatically
 const age3 = calcAge3(1991);
@@ -124,7 +126,7 @@ DATA 2:
 Dolphins score 85, 54, 41
 Koalas score 23, 34, 27
 */
-
+/*
 const dolphinsPoints1 = 44 + 23 + 71;
 const koalasPoints1 = 23 + 34 + 27;
 
@@ -163,19 +165,54 @@ checkWinner(60, 28);
  * Introduction to arrays
  * 
  */
+
 // longer to write out if multiple variables of same type
 const friend1 = 'michael';
 const friend2 = 'steven';
 const friend3 = 'peter';
-
+/*
 // create array of friend strings in collection 'friends'
 const friends = ['Michael', 'Steven', 'Peter'];
 console.log(friends);
 
-const years = new Array(1991, 1984, 2000, 2020);
+const y = new Array(1991, 1984, 2000, 2020);
 
 console.log(friends[0]);
 console.log(friends[2]);
 console.log(friends.length);
 console.log(friends[friends.length - 1]); // inside '[]' can use any expression
 
+friends[2] = 'Jay';
+console.log(friends);
+
+const firstName = 'David';
+const david = [firstName, 'Nguyen', 2020 - 1998, 'unemployed', friends];
+
+console.log(david);
+
+// Exercise 
+const calcAge = function(birthYear) {
+    return 2037 - birthYear;
+}
+
+// Cannot use arrays as a value in an expression
+const years = [1990, 1967, 2002, 2010, 2018];
+// gives an error due to invalid action
+console.log(calcAge(years));
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [calcAge([years[0]]), calcAge(years[1]), calcAge([years[years.length - 1]])];
+
+console.log(ages);
+
+/**
+ * Basic Array operations (methods)
+ * 
+ */
+
+ const friends = ['Michael', 'Steven', 'Peter'];
+ friends.push('Jay');
