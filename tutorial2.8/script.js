@@ -213,7 +213,7 @@ console.log(ages);
  * Basic Array operations (methods)
  * 
  */
-
+/*
 const friends = ['Michael', 'Steven', 'Peter'];
 const newLength = friends.push('Jay'); // adds another item into the array
 
@@ -270,16 +270,18 @@ from the function you created before.
 TEST DATA: 125, 555, 44
 */
 
-
 function calcTip (billValue) {
     if (billValue >= 50 && billValue <= 300) {
         const tip = billValue * 0.15;
         console.log(`Bill is ${billValue}, tip is ${tip}`);
+    } else if (billValue < 50 && billValue > 300) {
+        const tip = billValue * 0.2;
+        console.log(`Bill is ${billValue}, tip is ${tip}`);
     } else {
-        const hTip = billValue * 0.2;
-        console.log(`Bill is ${billValue}, tip is ${hTip}`);
-    } 
-    return 
+        const tip = billValue * 0.2;
+        console.log(`Bill is ${billValue}, tip is ${tip}`);
+    }
+    // return tip;
 }
 
 calcTip(100);
@@ -287,7 +289,12 @@ calcTip(100);
 const bills = [125, 555, 44];
 console.log(bills);
 
-const tips = [];
-tips.unshift(calcTip(bills[0]));
+const tip1 = calcTip(bills[0]);
+const tip2 = calcTip(bills[1]);
+const tip3 = calcTip(bills[2]);
 
-console.log(tips);
+const tips = new Array();
+//tips.push(tip1);
+
+//console.log(tip1);
+//console.log(tips.indexOf(tip1));
