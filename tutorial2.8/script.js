@@ -296,5 +296,5 @@ const tip3 = calcTip(bills[2]);
 const tips = new Array();
 //tips.push(tip1);
 
-//console.log(tip1);
+console.log(tip1);
 //console.log(tips.indexOf(tip1));
