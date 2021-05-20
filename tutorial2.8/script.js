@@ -214,5 +214,80 @@ console.log(ages);
  * 
  */
 
- const friends = ['Michael', 'Steven', 'Peter'];
- friends.push('Jay');
+const friends = ['Michael', 'Steven', 'Peter'];
+const newLength = friends.push('Jay'); // adds another item into the array
+
+console.log(friends);
+console.log(newLength);
+
+friends.unshift('John'); // unshift puts item at the start of array
+console.log(friends);
+
+friends.pop(); // removes the last item of array
+console.log(friends);
+
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift(); // removes the first item of array
+console.log(friends);
+
+// 'indexOf' finds the position of variable in array
+console.log(friends.indexOf('Steven'));
+
+
+friends.push(23);
+// 'includes' checks if variable defined is in array
+// strict equality (Must be EXACT same variable type)
+console.log(friends.includes('Steven'));
+console.log(friends.includes('23'));
+
+if (friends.includes('Steven')) {
+    console.log('You have a friend called Steven!');
+}
+
+/**
+ * Coding challenge 2
+ * 
+ */
+
+/*
+Steven is still building his tip calculator, using the same rules as before
+Tip 15% of the bill if the bill value is between 50 and 300, if the bill
+value is different, the tip is 20%
+
+1. Write a function 'calcTip' that takes any bill value as an input and returns
+the corresponding tip, calculated based on the rules above
+(You can check out the code from first tip calculator challenge if you need to)
+Use the function type you like the most. 
+Test the function using a bill value of 100
+2. Let's use arrays? So create an array 'bills' containing the test data below
+3. Create an array 'tips' containing the tip value for each bill, calculated
+from the function you created before.
+4. BONUS: Create an array 'total' containing the total values, so the bill + tip
+
+TEST DATA: 125, 555, 44
+*/
+
+
+function calcTip (billValue) {
+    if (billValue >= 50 && billValue <= 300) {
+        const tip = billValue * 0.15;
+        console.log(`Bill is ${billValue}, tip is ${tip}`);
+    } else {
+        const hTip = billValue * 0.2;
+        console.log(`Bill is ${billValue}, tip is ${hTip}`);
+    } 
+    return 
+}
+
+calcTip(100);
+
+const bills = [125, 555, 44];
+console.log(bills);
+
+const tips = [];
+tips.unshift(calcTip(bills[0]));
+
+console.log(tips);
