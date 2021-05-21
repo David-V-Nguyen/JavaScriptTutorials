@@ -274,17 +274,20 @@ function calcTip (billValue) {
     if (billValue >= 50 && billValue <= 300) {
         const tip = billValue * 0.15;
         console.log(`Bill is ${billValue}, tip is ${tip}`);
+        return tip;
     } else if (billValue < 50 && billValue > 300) {
         const tip = billValue * 0.2;
         console.log(`Bill is ${billValue}, tip is ${tip}`);
+        return tip;
     } else {
         const tip = billValue * 0.2;
         console.log(`Bill is ${billValue}, tip is ${tip}`);
+        return tip; // must be declared for each conditional result
     }
-    // return tip;
+    
 }
 
-calcTip(100);
+calcTip(100); // testing example
 
 const bills = [125, 555, 44];
 console.log(bills);
@@ -293,8 +296,101 @@ const tip1 = calcTip(bills[0]);
 const tip2 = calcTip(bills[1]);
 const tip3 = calcTip(bills[2]);
 
+//console.log(tip1); // testing
 const tips = new Array();
-//tips.push(tip1);
+tips.push(tip1);
+tips.push(tip2);
+tips.push(tip3);
+console.log(tips);
 
-console.log(tip1);
-//console.log(tips.indexOf(tip1));
+const total = new Array();
+
+const total1 = bills[0] + tip1;
+const total2 = bills[1] + tip2;
+const total3 = bills[2] + tip3;
+console.log(total1); // testing
+
+total.push(total1);
+total.push(total2);
+total.push(total3);
+console.log(total);
+
+/**
+ * Introduction to Objects
+ * 
+ */
+/*
+const davidArray = [
+    'David',
+    'Nguyen',
+    2037 - 1991,
+    'student',
+    ['Michael', 'Peter', 'Steven']
+];
+
+// This object 'David' has properties; 'firstName', 'lastName', 'age', etc
+// Object literal syntax, properties are clearly defined
+const david = { 
+    firstName: 'David',
+    lastName: 'Nguyen',
+    age: 2037 - 1991,
+    job: 'student',
+    friends: ['Michael', 'Peter', 'Steven']
+};
+
+console.log(david);
+
+/**
+ * Dot and Bracket notation
+ * Retrieving data from objects using Dot or Bracket notation
+ * 
+ */
+
+// ' . ' dot notation is an operator which finds any property defined inside object
+/*
+console.log(david.lastName);
+console.log(david['lastName']);
+
+const nameKey = 'Name';
+
+// '+' operator is executed first, square brackets can hold any expression 
+
+console.log(david['first' + nameKey]);
+console.log(david['last' + nameKey]);
+
+const interestedIn = prompt('what do you want to know about David? Choose between firstName, lastName, age, job and friends');
+console.log(david[interestedIn]);
+// david doesn't have 'interestedIn' property
+// bracket notation will allow 'david' object to have the property
+// JS replaces the 'interestedIn' property with the correct value defined
+
+if (david[interestedIn]) {
+    console.log(david[interestedIn]);
+} else {
+    console.log('Wrong request! what do you want to know about David? Choose between firstName, lastName, age, job and friends');
+}
+
+david.location  = 'England';
+david['twitter'] = '@InfamousNoodle';
+console.log(david);
+
+// Challenge
+// David has 3 friends, and his best friend is called michael
+
+david.bestFriend = 'Michael';
+david.friends = 3;
+
+/**
+ * Object Methods
+ * 
+ */
+
+ const david = { 
+    firstName: 'David',
+    lastName: 'Nguyen',
+    birthYear: 1998,
+    job: 'student',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+    
+};
