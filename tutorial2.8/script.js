@@ -434,7 +434,7 @@ console.log(david.getSummary());
  */
 
 /*
-Let's go back to Mark and John comparing their BMI's
+Let's go back to Mark and John comparing their BMI
 This time, let's use objects to implement the calculations ?
 Remember BMI = mass / height ** 2  = mass / (height  + height), (mass in kg and height in meter)
 
@@ -458,11 +458,11 @@ const mark = {
     calcBMI: function() {
         const value = this.mass / this.height ** 2;
         console.log(value);
-        const bmi = Math.round(value, 1);
-        console.log(bmi);
-        return bmi; 
+        this.bmi = value.toFixed(1);
+        console.log(this.bmi);
+        return this.bmi; 
     }
-}
+};
 
 const john = {
     firstName: 'John',
@@ -472,13 +472,26 @@ const john = {
     calcBMI: function() {
         const value = this.mass / this.height ** 2;
         console.log(value);
-        const bmi = Math.round(value, 2);
-        console.log(bmi);
-        return bmi;
+        this.bmi = value.toFixed(1);
+        console.log(this.bmi);
+        return this.bmi;
     }
-}
+};
 
 mark.calcBMI();
 john.calcBMI();
 
-console.log(``)
+if (mark.bmi > john.bmi) {
+    
+    console.log(`${mark.firstName}'s BMI (${mark.bmi}) is higher than ${john.firstName}'s (${john.bmi})!`);
+
+} else if (john.bmi > mark.bmi) {
+   
+    console.log(`${john.firstName}'s BMI (${john.bmi}) is higher than ${marks.firstName}'s (${mark.bmi})!`);
+}
+
+/**
+ * For loop (iteration)
+ * 
+ */
+
