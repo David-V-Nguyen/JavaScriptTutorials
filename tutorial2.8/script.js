@@ -392,5 +392,93 @@ david.friends = 3;
     job: 'student',
     friends: ['Michael', 'Peter', 'Steven'],
     hasDriversLicense: true,
-    
+
+    // function Expression
+    // 'calcAge' function (method) part of 'david' object
+    // Needs ':' after function name to be property of object 
+    // similar to calcAge function below
+    calcAge: function() {
+        // 'this' variable will point to 'david' object
+        // 'this' = the object calling the method
+        // calls and stores new 'age' property using 'this.age'
+        this.age = 2020 - this.birthYear;
+        return this.age;
+    },
+
+    // 'getSummary' method, summarizes all information of object 'david'
+    getSummary: function() {
+        return `${this.firstName} is a ${this.age}-year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`;
+    }
 };
+
+/*
+// Similar to this function
+const calcAge = function (birthYear) {
+    return 2020 - birthYear;
+}
+*/
+//console.log(david.calcAge(1998));       // Dot notation
+//console.log(david['calcAge'](1998));    // Bracket notation
+
+console.log(david.calcAge());
+console.log(david.age);
+console.log(david.getSummary());
+
+// Challenge 
+// 'david is a 23 year old student, and he has a drivers license'
+// located in 'david' object
+
+/**
+ * Coding challenge 3
+ * 
+ */
+
+/*
+Let's go back to Mark and John comparing their BMI's
+This time, let's use objects to implement the calculations ?
+Remember BMI = mass / height ** 2  = mass / (height  + height), (mass in kg and height in meter)
+
+1. For each of them, create an object with properties for their full name, mass and height
+(Mark Miller and John Smith)
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects)
+Store the BMI value to a property, and also return it from the method.
+3. Log to the console who has the higher BMI, together with the full name and the respective BMI.
+Example: 'John's BMI (28.3) is higher than Mark's (23.9)!'
+
+TEST DATA: 
+Mark's weight 78kg, height is 1.69m tall
+John's weight 92kg, height is 1.95m tall
+*/
+
+const mark = {
+    firstName: 'Mark',
+    lastName: 'Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function() {
+        const value = this.mass / this.height ** 2;
+        console.log(value);
+        const bmi = Math.round(value, 1);
+        console.log(bmi);
+        return bmi; 
+    }
+}
+
+const john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function() {
+        const value = this.mass / this.height ** 2;
+        console.log(value);
+        const bmi = Math.round(value, 2);
+        console.log(bmi);
+        return bmi;
+    }
+}
+
+mark.calcBMI();
+john.calcBMI();
+
+console.log(``)
