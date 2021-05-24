@@ -384,7 +384,7 @@ david.friends = 3;
  * Object Methods
  * 
  */
-
+/*
  const david = { 
     firstName: 'David',
     lastName: 'Nguyen',
@@ -419,7 +419,7 @@ const calcAge = function (birthYear) {
 */
 //console.log(david.calcAge(1998));       // Dot notation
 //console.log(david['calcAge'](1998));    // Bracket notation
-
+/*
 console.log(david.calcAge());
 console.log(david.age);
 console.log(david.getSummary());
@@ -510,10 +510,39 @@ for(let rep = 1; rep <= 10; rep++) {
  * 
  */
 
- const david = { 
-    firstName: 'David',
-    lastName: 'Nguyen',
-    birthYear: 1998,
-    job: 'student',
-    friends: ['Michael', 'Peter', 'Steven']
- };
+const david = [ 
+    'David',
+    'Nguyen',
+    1998,
+    'student',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+// empty array
+const types = [];
+
+
+// 'david' object doesn't have a 5th item
+for(let i = 0; i < david.length; i++) {
+    // reading from 'david' array
+    console.log(david[i], typeof david[i]);
+
+    // filling types of array
+    //types[i] = typeof david[i];
+    types.push(typeof david[i]);
+ }
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]); 
+}
+
+console.log(ages);
+
+// continue and break statement
+
