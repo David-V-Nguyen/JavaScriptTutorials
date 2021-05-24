@@ -495,3 +495,25 @@ if (mark.bmi > john.bmi) {
  * 
  */
 
+console.log('Lifting weights repetition 1');
+console.log('Lifting weights repetition 2');
+console.log('Lifting weights repetition 3');
+// breaks the DRY principle
+
+// for loop keeps running while condition is true
+for(let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
+
+/**
+ * Looping Arrays, Breaking and Continuing
+ * 
+ */
+
+ const david = { 
+    firstName: 'David',
+    lastName: 'Nguyen',
+    birthYear: 1998,
+    job: 'student',
+    friends: ['Michael', 'Peter', 'Steven']
+ };
